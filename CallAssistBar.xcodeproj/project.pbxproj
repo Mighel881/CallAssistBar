@@ -1,0 +1,362 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BB4FF08234881150002D941 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB4FF07234881150002D941 /* Foundation.framework */; };
+		3BB4FF0A234881150002D941 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB4FF09234881150002D941 /* UIKit.framework */; };
+		3BB4FF15234881150002D941 /* CallAssistBar.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BB4FF14234881150002D941 /* CallAssistBar.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3BB4FF04234881150002D941 /* CallAssistBar.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = CallAssistBar.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BB4FF07234881150002D941 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3BB4FF09234881150002D941 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3BB4FF0E234881150002D941 /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = control.txt; sourceTree = "<group>"; };
+		3BB4FF0F234881150002D941 /* control */ = {isa = PBXFileReference; lastKnownFileType = text; path = control; sourceTree = "<group>"; };
+		3BB4FF11234881150002D941 /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = PackageVersion.plist; path = ../PackageVersion.plist; sourceTree = "<group>"; };
+		3BB4FF12234881150002D941 /* CallAssistBar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CallAssistBar-Prefix.pch"; path = "../CallAssistBar-Prefix.pch"; sourceTree = "<group>"; };
+		3BB4FF13234881150002D941 /* CallAssistBar.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = CallAssistBar.xm; sourceTree = "<group>"; };
+		3BB4FF14234881150002D941 /* CallAssistBar.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CallAssistBar.mm; sourceTree = "<group>"; };
+		3BB4FF19234881150002D941 /* CallAssistBar.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CallAssistBar.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BB4FF00234881150002D941 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BB4FF08234881150002D941 /* Foundation.framework in Frameworks */,
+				3BB4FF0A234881150002D941 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3BB4FEF9234881150002D941 = {
+			isa = PBXGroup;
+			children = (
+				3BB4FF0B234881150002D941 /* CallAssistBar */,
+				3BB4FF06234881150002D941 /* Frameworks */,
+				3BB4FF05234881150002D941 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3BB4FF05234881150002D941 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BB4FF04234881150002D941 /* CallAssistBar.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BB4FF06234881150002D941 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BB4FF07234881150002D941 /* Foundation.framework */,
+				3BB4FF09234881150002D941 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3BB4FF0B234881150002D941 /* CallAssistBar */ = {
+			isa = PBXGroup;
+			children = (
+				3BB4FF13234881150002D941 /* CallAssistBar.xm */,
+				3BB4FF14234881150002D941 /* CallAssistBar.mm */,
+				3BB4FF0C234881150002D941 /* Package */,
+				3BB4FF10234881150002D941 /* Supporting Files */,
+			);
+			path = CallAssistBar;
+			sourceTree = "<group>";
+		};
+		3BB4FF0C234881150002D941 /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				3BB4FF0D234881150002D941 /* DEBIAN */,
+				3BB4FF16234881150002D941 /* Library */,
+			);
+			path = Package;
+			sourceTree = "<group>";
+		};
+		3BB4FF0D234881150002D941 /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				3BB4FF0E234881150002D941 /* control.txt */,
+				3BB4FF0F234881150002D941 /* control */,
+			);
+			path = DEBIAN;
+			sourceTree = "<group>";
+		};
+		3BB4FF10234881150002D941 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BB4FF11234881150002D941 /* PackageVersion.plist */,
+				3BB4FF12234881150002D941 /* CallAssistBar-Prefix.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3BB4FF16234881150002D941 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				3BB4FF17234881150002D941 /* MobileSubstrate */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		3BB4FF17234881150002D941 /* MobileSubstrate */ = {
+			isa = PBXGroup;
+			children = (
+				3BB4FF18234881150002D941 /* DynamicLibraries */,
+			);
+			path = MobileSubstrate;
+			sourceTree = "<group>";
+		};
+		3BB4FF18234881150002D941 /* DynamicLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				3BB4FF19234881150002D941 /* CallAssistBar.plist */,
+			);
+			path = DynamicLibraries;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3BB4FF01234881150002D941 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3BB4FF03234881150002D941 /* CallAssistBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BB4FF1C234881150002D941 /* Build configuration list for PBXNativeTarget "CallAssistBar" */;
+			buildPhases = (
+				3BB4FEFE234881150002D941 /* ShellScript */,
+				3BB4FEFF234881150002D941 /* Sources */,
+				3BB4FF00234881150002D941 /* Frameworks */,
+				3BB4FF01234881150002D941 /* Headers */,
+				3BB4FF02234881150002D941 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CallAssistBar;
+			productName = CallAssistBar;
+			productReference = 3BB4FF04234881150002D941 /* CallAssistBar.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BB4FEFA234881150002D941 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					3BB4FF03234881150002D941 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 3BB4FEFD234881150002D941 /* Build configuration list for PBXProject "CallAssistBar" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3BB4FEF9234881150002D941;
+			productRefGroup = 3BB4FF05234881150002D941 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BB4FF03234881150002D941 /* CallAssistBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3BB4FEFE234881150002D941 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp-logos";
+		};
+		3BB4FF02234881150002D941 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3BB4FEFF234881150002D941 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BB4FF15234881150002D941 /* CallAssistBar.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3BB4FF1A234881150002D941 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(iOSOpenDevPath)/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Debug;
+		};
+		3BB4FF1B234881150002D941 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(iOSOpenDevPath)/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Release;
+		};
+		3BB4FF1D234881150002D941 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MWWUX5FJ52;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CallAssistBar/CallAssistBar-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Debug;
+		};
+		3BB4FF1E234881150002D941 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MWWUX5FJ52;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CallAssistBar/CallAssistBar-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3BB4FEFD234881150002D941 /* Build configuration list for PBXProject "CallAssistBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BB4FF1A234881150002D941 /* Debug */,
+				3BB4FF1B234881150002D941 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BB4FF1C234881150002D941 /* Build configuration list for PBXNativeTarget "CallAssistBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BB4FF1D234881150002D941 /* Debug */,
+				3BB4FF1E234881150002D941 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3BB4FEFA234881150002D941 /* Project object */;
+}
