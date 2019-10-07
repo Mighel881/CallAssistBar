@@ -10,7 +10,25 @@
 		3BB4FF08234881150002D941 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB4FF07234881150002D941 /* Foundation.framework */; };
 		3BB4FF0A234881150002D941 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB4FF09234881150002D941 /* UIKit.framework */; };
 		3BB4FF15234881150002D941 /* CallAssistBar.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BB4FF14234881150002D941 /* CallAssistBar.mm */; };
+		3BB4FF20234881260002D941 /* libsubstrate.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB4FF1F234881260002D941 /* libsubstrate.dylib */; };
+		3BB4FF21234881260002D941 /* libsubstrate.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3BB4FF1F234881260002D941 /* libsubstrate.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3BB4FF24234884500002D941 /* TUCall.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BB4FF23234884500002D941 /* TUCall.h */; };
+		3BF2B83E234AEA170081C9C9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF2B83D234AEA170081C9C9 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3BB4FF22234881260002D941 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3BB4FF21234881260002D941 /* libsubstrate.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3BB4FF04234881150002D941 /* CallAssistBar.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = CallAssistBar.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,11 +36,16 @@
 		3BB4FF09234881150002D941 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3BB4FF0E234881150002D941 /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = control.txt; sourceTree = "<group>"; };
 		3BB4FF0F234881150002D941 /* control */ = {isa = PBXFileReference; lastKnownFileType = text; path = control; sourceTree = "<group>"; };
-		3BB4FF11234881150002D941 /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = PackageVersion.plist; path = ../PackageVersion.plist; sourceTree = "<group>"; };
-		3BB4FF12234881150002D941 /* CallAssistBar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CallAssistBar-Prefix.pch"; path = "../CallAssistBar-Prefix.pch"; sourceTree = "<group>"; };
-		3BB4FF13234881150002D941 /* CallAssistBar.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = CallAssistBar.xm; sourceTree = "<group>"; };
+		3BB4FF11234881150002D941 /* CallAssistBar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CallAssistBar-Prefix.pch"; path = "CallAssistBar/CallAssistBar-Prefix.pch"; sourceTree = "<group>"; };
+		3BB4FF12234881150002D941 /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = PackageVersion.plist; path = CallAssistBar/PackageVersion.plist; sourceTree = "<group>"; };
+		3BB4FF13234881150002D941 /* CallAssistBar.xm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CallAssistBar.xm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		3BB4FF14234881150002D941 /* CallAssistBar.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CallAssistBar.mm; sourceTree = "<group>"; };
 		3BB4FF19234881150002D941 /* CallAssistBar.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CallAssistBar.plist; sourceTree = "<group>"; };
+		3BB4FF1F234881260002D941 /* libsubstrate.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsubstrate.dylib; path = ../../../../opt/iOSOpenDev/lib/libsubstrate.dylib; sourceTree = "<group>"; };
+		3BB4FF23234884500002D941 /* TUCall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TUCall.h; sourceTree = "<group>"; };
+		3BF2B83B234A61B40081C9C9 /* answer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = answer.png; sourceTree = "<group>"; };
+		3BF2B83C234A61B40081C9C9 /* decline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = decline.png; sourceTree = "<group>"; };
+		3BF2B83D234AEA170081C9C9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,7 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BF2B83E234AEA170081C9C9 /* CoreGraphics.framework in Frameworks */,
 				3BB4FF08234881150002D941 /* Foundation.framework in Frameworks */,
+				3BB4FF20234881260002D941 /* libsubstrate.dylib in Frameworks */,
 				3BB4FF0A234881150002D941 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,6 +83,8 @@
 		3BB4FF06234881150002D941 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3BF2B83D234AEA170081C9C9 /* CoreGraphics.framework */,
+				3BB4FF1F234881260002D941 /* libsubstrate.dylib */,
 				3BB4FF07234881150002D941 /* Foundation.framework */,
 				3BB4FF09234881150002D941 /* UIKit.framework */,
 			);
@@ -71,6 +98,7 @@
 				3BB4FF14234881150002D941 /* CallAssistBar.mm */,
 				3BB4FF0C234881150002D941 /* Package */,
 				3BB4FF10234881150002D941 /* Supporting Files */,
+				3BB4FF23234884500002D941 /* TUCall.h */,
 			);
 			path = CallAssistBar;
 			sourceTree = "<group>";
@@ -96,8 +124,8 @@
 		3BB4FF10234881150002D941 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3BB4FF11234881150002D941 /* PackageVersion.plist */,
-				3BB4FF12234881150002D941 /* CallAssistBar-Prefix.pch */,
+				3BB4FF11234881150002D941 /* CallAssistBar-Prefix.pch */,
+				3BB4FF12234881150002D941 /* PackageVersion.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -105,6 +133,7 @@
 		3BB4FF16234881150002D941 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				3BF2B839234A611B0081C9C9 /* Application Support */,
 				3BB4FF17234881150002D941 /* MobileSubstrate */,
 			);
 			path = Library;
@@ -126,6 +155,23 @@
 			path = DynamicLibraries;
 			sourceTree = "<group>";
 		};
+		3BF2B839234A611B0081C9C9 /* Application Support */ = {
+			isa = PBXGroup;
+			children = (
+				3BF2B83A234A61320081C9C9 /* CallAssistBar */,
+			);
+			name = "Application Support";
+			sourceTree = "<group>";
+		};
+		3BF2B83A234A61320081C9C9 /* CallAssistBar */ = {
+			isa = PBXGroup;
+			children = (
+				3BF2B83B234A61B40081C9C9 /* answer.png */,
+				3BF2B83C234A61B40081C9C9 /* decline.png */,
+			);
+			path = CallAssistBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -133,6 +179,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BB4FF24234884500002D941 /* TUCall.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +195,7 @@
 				3BB4FF00234881150002D941 /* Frameworks */,
 				3BB4FF01234881150002D941 /* Headers */,
 				3BB4FF02234881150002D941 /* ShellScript */,
+				3BB4FF22234881260002D941 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -294,18 +342,26 @@
 		3BB4FF1D234881150002D941 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				ARCHS = (
+					arm64,
+					arm64e,
+				);
+				CODE_SIGN_IDENTITY = "Apple Development: admin@4han.com (JKEK4K9PP4)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = MWWUX5FJ52;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CallAssistBar/CallAssistBar-Prefix.pch";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/iOSOpenDev/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
-				iOSOpenDevDevice = "";
+				iOSOpenDevDevice = 192.168.10.28;
 				iOSOpenDevInstallOnAnyBuild = NO;
 				iOSOpenDevInstallOnProfiling = YES;
 				iOSOpenDevRespringOnInstall = YES;
@@ -316,18 +372,26 @@
 		3BB4FF1E234881150002D941 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				ARCHS = (
+					arm64,
+					arm64e,
+				);
+				CODE_SIGN_IDENTITY = "Apple Development: admin@4han.com (JKEK4K9PP4)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = MWWUX5FJ52;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CallAssistBar/CallAssistBar-Prefix.pch";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/iOSOpenDev/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
-				iOSOpenDevDevice = "";
+				iOSOpenDevDevice = 192.168.10.28;
 				iOSOpenDevInstallOnAnyBuild = NO;
 				iOSOpenDevInstallOnProfiling = YES;
 				iOSOpenDevRespringOnInstall = YES;

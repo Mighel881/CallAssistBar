@@ -1,6 +1,6 @@
 Package: com.xybp888.CallAssistBar
 Name: CallAssistBar
-Version: 0.1-1
+Version: 1.0-1
 Description: 
 Section: System
 Depends: firmware (>= 11.0), mobilesubstrate
