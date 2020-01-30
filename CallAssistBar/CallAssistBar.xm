@@ -76,10 +76,19 @@ static void myshowcallenbanner() {
 }
 %end
 
+@interface PHInCallUIUtilities
++ (id)sharedInstance;
++ (_Bool)isSpringBoardPasscodeLocked;
+@property(nonatomic, getter=isSpringBoardLocked) _Bool springBoardLocked;
+@end
+
+
 %hook PHInCallRootViewController //锁定显示正常界面
 - (void)_loadAudioCallViewController{
     id incomingCallState = [[%c(TUCallCenter) sharedInstance] incomingCall];
-    if(![%c(PHInCallUIUtilities)isSpringBoardLocked] && incomingCallState){
+    BOOL islOcak = [%c(PHInCallUIUtilities) isSpringBoardPasscodeLocked];
+   // NSLog(@"测试=%d",islOcak);
+    if(!islOcak && incomingCallState){
         [self prepareForDismissal];
         [self dismissPhoneRemoteViewController];
         CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(), (CFStringRef)@"com.xybp888.CallAssist/showcallbanner", nil, nil, true);
@@ -113,31 +122,6 @@ static void orientationChanged()
 }
 
 %hook _UIStatusBarForegroundView
-- (id)initWithFrame:(struct CGRect)arg1{
-    
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
-    tapGesture.numberOfTapsRequired = 2;
-    [self addGestureRecognizer:tapGesture];
-    [tapGesture release];
-    return %orig;
-}
-
-#pragma mark langPress 长按手势事件
-%new
--(void)handleTapGesture:(UITapGestureRecognizer *)sender{
-    //进行判断,在什么时候触发事件
-    if (sender.state == UIGestureRecognizerStateRecognized) {
-        TUCall *incomingCallInfo = [[%c(TUCallCenter) sharedInstance]incomingCall];
-      //  NSLog(@"双击测试=%d",incomingCallInfo.callStatus);
-      //  [[%c(SpringBoard) sharedApplication] shouldShowCallBanner];
-        if(incomingCallInfo.callStatus != 0){
-           CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(), (CFStringRef)@"com.xybp888.CallAssist/showcallbanner", nil, nil, true);
-        }
-    }
-}
-%end
-
-%hook UIStatusBarForegroundView
 - (id)initWithFrame:(struct CGRect)arg1{
     
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
@@ -475,6 +459,9 @@ static void orientationChanged()
    // NSLog(@"测试 = %@",[incomingCallInfo provider]);
     if(incomingCallInfo.displayContext.callDirectoryLabel == nil){
         NSString *locationStr = [ZSLocation getLocation:incomingCallInfo.destinationID];
+        if([locationStr containsString:@"数据库"]){
+            locationStr = @"";
+        }
         self.loactionLabel.text = locationStr;
     }else{
         self.loactionLabel.text = incomingCallInfo.displayContext.callDirectoryLabel;
@@ -486,7 +473,7 @@ static void orientationChanged()
            self.loactionLabel.text = @"腾讯QQ音频";
     }
     if([incomingCallInfo.provider.localizedName hasPrefix:@"无忧"]){
-           self.loactionLabel.text = @"腾讯QQ音频";
+           self.loactionLabel.text = @"无忧行音频";
     }
    
     [UIView animateWithDuration:0.3f animations:^{
